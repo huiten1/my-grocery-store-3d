@@ -970,7 +970,7 @@ PrefabInstance:
     - target: {fileID: 2375334581895371008, guid: 004aa0028aa784b4d9f50faf20f652c2, type: 3}
       propertyPath: itemToPopulate
       value: 
-      objectReference: {fileID: 1325779956366904928, guid: a077166a9a665f34ba72afa0eca196ac, type: 3}
+      objectReference: {fileID: 5063096489705323049, guid: 8d7ca116e20aa614b8f9ad0e517752dc, type: 3}
     - target: {fileID: 2375334581895371008, guid: 004aa0028aa784b4d9f50faf20f652c2, type: 3}
       propertyPath: prefabToUnlock
       value: 
@@ -2704,7 +2704,7 @@ PrefabInstance:
     - target: {fileID: 2375334581895371008, guid: 004aa0028aa784b4d9f50faf20f652c2, type: 3}
       propertyPath: itemToPopulate
       value: 
-      objectReference: {fileID: 1325779956366904928, guid: a077166a9a665f34ba72afa0eca196ac, type: 3}
+      objectReference: {fileID: 2713709480792339432, guid: cc5c46f1bb9a6e64097edde9d59409d7, type: 3}
     - target: {fileID: 2375334581895371008, guid: 004aa0028aa784b4d9f50faf20f652c2, type: 3}
       propertyPath: prefabToUnlock
       value: 
@@ -2990,7 +2990,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pineapple
+  m_text: Wall Mart
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: de4e4fa10c85e2e45b4d5a94d0348942, type: 2}
   m_sharedMaterial: {fileID: 7423409246693961632, guid: de4e4fa10c85e2e45b4d5a94d0348942, type: 2}
@@ -2999,8 +2999,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4284966759
-  m_fontColor: {r: 0.4056604, g: 0.4056604, b: 0.4056604, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8611,7 +8611,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29276
+  m_Name: pb_Mesh28698
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12097,7 +12097,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29450
+  m_Name: pb_Mesh28872
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12340,7 +12340,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1143141492
 Transform:
   m_ObjectHideFlags: 0
@@ -12538,7 +12538,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29804
+  m_Name: pb_Mesh29226
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15249,7 +15249,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1305754486}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.23, y: -0.88, z: 8}
+  m_LocalPosition: {x: 0, y: -0.83, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -21619,7 +21619,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102961930}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.09, y: 0.846, z: -8.97}
+  m_LocalPosition: {x: 8.9, y: 0.846, z: -1.02}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

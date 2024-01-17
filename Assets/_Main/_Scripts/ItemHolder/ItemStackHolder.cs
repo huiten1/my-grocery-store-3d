@@ -60,7 +60,7 @@ namespace _Main._Scripts
             int count = items.Count;
             for (int i = count - 1; i >= 0; i--)
             {
-                if (items[i].name.ToLower().Contains(filter.ToLower()))
+                if (filter.ToLower().Contains(items[i].name.ToLower()))
                 {
                     var res = items[i];
                     items.RemoveAt(i);

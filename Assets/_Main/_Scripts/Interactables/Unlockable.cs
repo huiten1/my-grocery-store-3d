@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Linq;
 using _Game.UI;
 using _Main._Scripts.Interaction;
 using _Main._Scripts.Provider;
@@ -13,18 +14,18 @@ using Random = UnityEngine.Random;
 
 namespace _Main._Scripts.Money
 {
-    public class Unlockable : MonoBehaviour , IInteractable,IIndicator<ProgressData>
+    public class Unlockable : MonoBehaviour, IInteractable, IIndicator<ProgressData>
     {
         [SerializeField] private int price;
         [SerializeField] private GameObject prefabToUnlock;
         public bool shouldPopulate;
-        [SerializeField] private GameObject itemToPopulate;
+        [SerializeField] private GameObject[] itemsToPopulate;
         private int currentPrice;
         [SerializeField] private UnityEvent onUnlock;
         private bool unlocked;
 
         private string key = "";
-        
+
         private IEnumerator Start()
         {
             currentPrice = GetPrice();
@@ -42,7 +43,7 @@ namespace _Main._Scripts.Money
             var tf = transform;
             while (tf.parent != null)
             {
-                key = key.Insert( 0,$"{tf.gameObject.name}.");
+                key = key.Insert(0, $"{tf.gameObject.name}.");
                 tf = tf.parent;
             }
         }
@@ -59,19 +60,19 @@ namespace _Main._Scripts.Money
 
         public void Interact(GameObject interactor)
         {
-            if(unlocked) return;
-            if(!interactor.CompareTag("Player")) return;
-            
-            if(MoneySystem.Instance.playerMoney<1) return;
+            if (unlocked) return;
+            if (!interactor.CompareTag("Player")) return;
+
+            if (MoneySystem.Instance.playerMoney < 1) return;
             //TODO:Refactor this into its own class 
             Transaction(interactor);
             Transaction(interactor);
-            PlayerPrefs.SetInt(key,currentPrice);
+            PlayerPrefs.SetInt(key, currentPrice);
         }
 
         private void Transaction(GameObject interactor)
         {
-            if(unlocked) return;
+            if (unlocked) return;
             var money = Instantiate(MoneySystem.Instance.moneyPf, interactor.transform.position + Vector3.up,
                 interactor.transform.rotation);
             var seq = DOTween.Sequence();
@@ -93,23 +94,23 @@ namespace _Main._Scripts.Money
             currentPrice = Mathf.Max(0, currentPrice);
             ValueChanged?.Invoke(Value);
             MoneySystem.Instance.SpendMoney(1);
-            
+
             if (currentPrice > 0) return;
-                Unlock();
+            Unlock();
         }
-        
+
 
         public void Unlock()
         {
             onUnlock?.Invoke();
             unlocked = true;
-            PlayerPrefs.SetInt(key,currentPrice);
+            PlayerPrefs.SetInt(key, currentPrice);
             gameObject.SetActive(false);
-            
-            var spawnedObject = Instantiate(prefabToUnlock, transform.position + prefabToUnlock.transform.position,prefabToUnlock.transform.
-                rotation);
+
+            var spawnedObject = Instantiate(prefabToUnlock, transform.position + prefabToUnlock.transform.position,
+                prefabToUnlock.transform.rotation);
             spawnedObject.transform.DOPunchScale(Vector3.one * 0.1f, 0.6f, 1, 1f);
-            
+
             if (spawnedObject.GetComponent<ItemMoneyTransaction>())
             {
                 CashierProvider.Instance.Add(spawnedObject);
@@ -117,22 +118,27 @@ namespace _Main._Scripts.Money
 
             if (spawnedObject.GetComponent<Transaction>())
             {
-                spawnedObject.GetComponent<Transaction>().filter = itemToPopulate.name;
+                spawnedObject.GetComponent<Transaction>().filter =
+                    itemsToPopulate.Aggregate("", (sum, next) => sum + next.name);
             }
+
             if (spawnedObject.GetComponent<LimitedItemHolder>())
             {
                 var itemRackPopulator = spawnedObject.GetComponent<ItemRackPopulator>();
                 if (itemRackPopulator)
                 {
-                    itemRackPopulator.itemToPopulate = itemToPopulate;
+                    itemRackPopulator.itemsToPopulate = itemsToPopulate;
                     itemRackPopulator.shouldPopulate = shouldPopulate;
                 }
+
                 var holder = spawnedObject.GetComponent<LimitedItemHolder>();
                 FreeIsleProvider.Instance.Add(holder);
             }
         }
+
         public ProgressData Value => new()
             { percentage = 1 - (float)currentPrice / price, text = currentPrice.ToString() };
+
         public event Action<ProgressData> ValueChanged;
     }
 }

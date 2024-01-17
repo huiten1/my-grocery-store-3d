@@ -538,7 +538,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c34e6118f2849dfbfb2212ccd274b2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemToPopulate: {fileID: 0}
+  itemToPopulate: {fileID: 5063096489705323049, guid: 8d7ca116e20aa614b8f9ad0e517752dc, type: 3}
+  itemsToPopulate: []
   shouldPopulate: 0
   itemRack: {fileID: 8195843984302793190}
   spawnPeriod: 1
