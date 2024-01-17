@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &914334680954700175
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1318241447697138929, guid: 5d5c9fe41e082db4b9a91bc57d0484d2, type: 3}
+      propertyPath: shouldGiveTo
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318241447697138929, guid: 5d5c9fe41e082db4b9a91bc57d0484d2, type: 3}
+      propertyPath: shouldGetFrom
+      value: Customer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318241447722773005, guid: 5d5c9fe41e082db4b9a91bc57d0484d2, type: 3}
+      propertyPath: shouldGiveTo
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318241447722773005, guid: 5d5c9fe41e082db4b9a91bc57d0484d2, type: 3}
+      propertyPath: shouldGetFrom
+      value: Customer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318241447887560200, guid: 5d5c9fe41e082db4b9a91bc57d0484d2, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318241447887560200, guid: 5d5c9fe41e082db4b9a91bc57d0484d2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318241447887560200, guid: 5d5c9fe41e082db4b9a91bc57d0484d2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318241447887560200, guid: 5d5c9fe41e082db4b9a91bc57d0484d2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 3.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318241447887560200, guid: 5d5c9fe41e082db4b9a91bc57d0484d2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318241447887560200, guid: 5d5c9fe41e082db4b9a91bc57d0484d2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318241447887560200, guid: 5d5c9fe41e082db4b9a91bc57d0484d2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318241447887560200, guid: 5d5c9fe41e082db4b9a91bc57d0484d2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318241447887560200, guid: 5d5c9fe41e082db4b9a91bc57d0484d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318241447887560200, guid: 5d5c9fe41e082db4b9a91bc57d0484d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318241447887560200, guid: 5d5c9fe41e082db4b9a91bc57d0484d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318241447887560203, guid: 5d5c9fe41e082db4b9a91bc57d0484d2, type: 3}
+      propertyPath: m_Name
+      value: StorageWagon
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318241448650679139, guid: 5d5c9fe41e082db4b9a91bc57d0484d2, type: 3}
+      propertyPath: shouldGiveTo
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1318241448650679139, guid: 5d5c9fe41e082db4b9a91bc57d0484d2, type: 3}
+      propertyPath: shouldGetFrom
+      value: Customer
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5d5c9fe41e082db4b9a91bc57d0484d2, type: 3}

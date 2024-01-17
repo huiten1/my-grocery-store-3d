@@ -6,7 +6,6 @@ namespace _Main._Scripts
     public class ItemRackPopulator : MonoBehaviour
     {
         public GameObject itemToPopulate;
-        public GameObject[] itemsToPopulate;
         public bool shouldPopulate;
         [SerializeField] private LimitedItemHolder itemRack;
         [SerializeField] private float spawnPeriod;

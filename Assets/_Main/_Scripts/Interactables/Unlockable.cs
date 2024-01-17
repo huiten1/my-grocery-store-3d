@@ -116,22 +116,25 @@ namespace _Main._Scripts.Money
                 CashierProvider.Instance.Add(spawnedObject);
             }
 
-            if (spawnedObject.GetComponent<Transaction>())
-            {
-                spawnedObject.GetComponent<Transaction>().filter =
-                    itemsToPopulate.Aggregate("", (sum, next) => sum + next.name);
-            }
 
-            if (spawnedObject.GetComponent<LimitedItemHolder>())
-            {
-                var itemRackPopulator = spawnedObject.GetComponent<ItemRackPopulator>();
-                if (itemRackPopulator)
+            var transactions = spawnedObject.GetComponentsInChildren<Transaction>();
+
+            if (itemsToPopulate.Length > 0)
+                for (var index = 0; index < transactions.Length; index++)
                 {
-                    itemRackPopulator.itemsToPopulate = itemsToPopulate;
-                    itemRackPopulator.shouldPopulate = shouldPopulate;
+                    var transaction = transactions[index];
+                    transaction.filter = itemsToPopulate[index % itemsToPopulate.Length].name;
                 }
 
-                var holder = spawnedObject.GetComponent<LimitedItemHolder>();
+
+            var itemRackPopulators = spawnedObject.GetComponentsInChildren<ItemRackPopulator>();
+            for (var index = 0; index < itemRackPopulators.Length; index++)
+            {
+                var itemRackPopulator = itemRackPopulators[index];
+                itemRackPopulator.itemToPopulate = itemsToPopulate[index % itemsToPopulate.Length];
+                itemRackPopulator.shouldPopulate = shouldPopulate;
+
+                var holder = itemRackPopulator.GetComponent<LimitedItemHolder>();
                 FreeIsleProvider.Instance.Add(holder);
             }
         }

@@ -31,7 +31,8 @@ namespace _Main._Scripts.Provider
 
             if (!isle) return null;
             
-            var interactionPoints = isle.GetComponentsInChildren<Interactable>();
+            var interactionPoints = isle.GetComponentInParent<CompositeInteractor>().GetComponentsInChildren<Interactable>();
+            if (interactionPoints.Length == 0) return null;
             index++;
             index %= interactionPoints.Length;
             return interactionPoints[index].gameObject;

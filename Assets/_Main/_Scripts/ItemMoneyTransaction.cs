@@ -106,7 +106,7 @@ namespace _Main._Scripts
             seq.Append(item.transform.DOLocalJump( -targetLocalPos, 1.5f,1,itemPlaceDuration));
             seq.Insert(0, item.transform.DORotateQuaternion(itemTargetRot, itemPlaceDuration).SetEase(Ease.InQuad));
             // seq.Insert(0, item.transform.DOScale(Vector3.one, itemPlaceDuration));
-            seq.Insert(itemPlaceDuration*0.8f,box.transform.GetChild(1).DOLocalJump(Vector3.up*0.13f,1f,1,0.5f ));
+            seq.Insert(itemPlaceDuration*0.8f,box.transform.GetChild(1).DOLocalJump(Vector3.up*0.39f,1f,1,0.5f ));
             seq.Insert(itemPlaceDuration*0.8f,box.transform.GetChild(1).DOLocalRotate(Vector3.zero,0.5f ).SetEase(Ease.OutQuad));
             
             
