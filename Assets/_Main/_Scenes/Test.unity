@@ -8659,7 +8659,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28698
+  m_Name: pb_Mesh54712
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12145,7 +12145,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh28874
+  m_Name: pb_Mesh55142
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -12586,7 +12586,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh29228
+  m_Name: pb_Mesh56080
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16175,7 +16175,7 @@ MonoBehaviour:
     exitEvent: {fileID: 11400000, guid: 5632405923d9aea40a12ef29660a1696, type: 2}
     objectToUnlock: {fileID: 136030739}
     arrow: {fileID: 441718676}
-    text: Put laptops on table!
+    text: Put vegetales on table!
   - OnActivate:
       m_PersistentCalls:
         m_Calls:
@@ -16321,7 +16321,7 @@ MonoBehaviour:
     exitEvent: {fileID: 11400000, guid: f18ee17a410a9644796bd90ce1a15b6a, type: 2}
     objectToUnlock: {fileID: 2112025654}
     arrow: {fileID: 441718676}
-    text: Unlock mobile phone!
+    text: Unlock soda isle!!
   - OnActivate:
       m_PersistentCalls:
         m_Calls:
@@ -21788,7 +21788,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102961930}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.9, y: 0.846, z: -1.02}
+  m_LocalPosition: {x: -1.2, y: 0.846, z: 0.86}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

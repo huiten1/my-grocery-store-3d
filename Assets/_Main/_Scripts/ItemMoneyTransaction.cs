@@ -97,19 +97,19 @@ namespace _Main._Scripts
             {
                 // float x
                 var szA = boxBounds.size;
-                var szB = item.transform.localScale;
+                var szB = itemCol.bounds.size;
                 var scale = new Vector3(szA.x / szB.x, szA.y / szB.y, szA.z / szB.z);
-                item.transform.DOScale(scale *.9f , 0.6f);
+                item.transform.DOScale( Vector3.one* scale.y *.9f , 0.6f);
             }
             proccessingItems.Add(box);
             float itemPlaceDuration = .5f;
             box.transform.localScale = Vector3.zero;
 
             var seq = DOTween.Sequence(box.transform.DOScale(boxPf.transform.localScale,0.6f).SetEase(Ease.OutBack));
-            seq.Append(item.transform.DOLocalJump( Vector3.zero, 1.5f,1,itemPlaceDuration));
+            seq.Append(item.transform.DOLocalJump( new Vector3(0,0.05f,0), 1.5f,1,itemPlaceDuration));
             seq.Insert(0, item.transform.DORotateQuaternion(itemTargetRot, itemPlaceDuration).SetEase(Ease.InQuad));
             // seq.Insert(0, item.transform.DOScale(Vector3.one, itemPlaceDuration));
-            seq.Insert(itemPlaceDuration*0.8f,box.transform.GetChild(1).DOLocalJump(Vector3.up*0.4f,1f,1,0.5f ));
+            seq.Insert(itemPlaceDuration*0.8f,box.transform.GetChild(1).DOLocalJump(Vector3.up*0.45f,1f,1,0.5f ));
             seq.Insert(itemPlaceDuration*0.8f,box.transform.GetChild(1).DOLocalRotate(Vector3.zero,0.5f ).SetEase(Ease.OutQuad));
             
             
